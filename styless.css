@@ -1,10 +1,9 @@
-styless
-
 :root {
   --uaem-verde: #00522b;
   --uaem-verde-oscuro: #01301a;
   --uaem-dorado: #c9a648;
   --uaem-crema: #f5efe1;
+
   --bg-main: #f4f4f4;
   --text-principal: #1f2933;
   --text-secundario: #4b5563;
@@ -23,8 +22,14 @@ body {
   color: var(--text-principal);
 }
 
+/* ========= HEADER UAEM ========= */
+
 .uaem-header {
-  background: linear-gradient(90deg, var(--uaem-verde-oscuro), var(--uaem-verde));
+  background: linear-gradient(
+    90deg,
+    var(--uaem-verde-oscuro),
+    var(--uaem-verde)
+  );
   color: white;
   padding: 14px 32px;
   display: flex;
@@ -74,6 +79,8 @@ body {
   border: 1px solid rgba(249, 250, 251, 0.7);
 }
 
+/* ========= LAYOUT ========= */
+
 .layout {
   max-width: 1200px;
   margin: 24px auto 40px;
@@ -83,6 +90,8 @@ body {
   grid-template-rows: auto auto;
   gap: 20px;
 }
+
+/* ========= CARD ========= */
 
 .card {
   background: #ffffff;
@@ -108,6 +117,8 @@ body {
   font-size: 13px;
   color: var(--text-secundario);
 }
+
+/* ========= FORM ========= */
 
 .form-grid {
   display: grid;
@@ -161,6 +172,8 @@ select:focus {
   gap: 10px;
   margin-top: 4px;
 }
+
+/* ========= BOTONES ========= */
 
 .btn {
   display: inline-flex;
@@ -219,6 +232,8 @@ select:focus {
   color: #f9fafb;
 }
 
+/* ========= TABLAS ========= */
+
 .table-wrapper {
   margin-top: 8px;
   border-radius: 10px;
@@ -256,6 +271,8 @@ tbody tr:hover {
   background: #eef2ff;
 }
 
+/* ========= GRÁFICA ========= */
+
 .grafica-container {
   margin-top: 8px;
   padding: 8px;
@@ -264,12 +281,16 @@ tbody tr:hover {
   border: 1px solid #e5e7eb;
 }
 
+/* ========= FOOTER ========= */
+
 .uaem-footer {
   text-align: center;
   font-size: 11px;
   color: var(--text-secundario);
   padding: 10px 16px 16px;
 }
+
+/* ========= RESPONSIVE ========= */
 
 @media (max-width: 900px) {
   .layout {
