@@ -1,12 +1,18 @@
 // Importar Firebase desde la CDN
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  onSnapshot,
+  getDocs,
+  doc,
+  updateDoc,
+  deleteDoc
+} from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+// Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBezs_bWPWNxKjI89ke2yeFH6rgjRdd6G0",
   authDomain: "crud-estudiantes-a0c42.firebaseapp.com",
@@ -17,9 +23,9 @@ const firebaseConfig = {
   measurementId: "G-5BD44XVPM4"
 };
 
-// Initialize Firebase
+// Inicializar Firebase y Firestore
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 // Colección de estudiantes
 const estudiantesCol = collection(db, "estudiantes");
